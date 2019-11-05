@@ -1,0 +1,87 @@
+.home-wrap
+    display: flex
+    min-height: 100vh
+
+    @media(max-width: 775px)
+        display: block
+
+.home-sections
+    flex: 1
+
+    section
+        padding: 50px 0
+        position: relative
+
+    .mask
+        background: fade-out(black,.3)
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        position: absolute
+
+        @media(max-width: 640px)
+          display: none
+
+
+    .flex
+        display: flex
+
+    .flex--center
+        justify-content: center
+
+    .flex--space-around
+        justify-content: space-around
+
+    .order-first
+        order: -1
+
+//columns
+.col-1
+    max-width: 320px
+    margin: 0 10px
+    //background: #F75105
+    box-sizing: border-box
+
+.col-2
+    max-width: 640px
+    margin: 0 10px
+    //background: #3285A6
+    box-sizing: border-box
+    //width: 100%
+
+.col-50
+    width: 50%
+    //background: #F2CB05
+
+//Typography
+.home-lead
+    font:
+        size: 36px
+    line-height: 1.1
+    @media(max-width: 640px)
+      text-align: center
+    &.outdented
+        text-indent: -.75em
+        @media(max-width: 640px)
+            text-indent: 0
+
+.push-right
+    margin-left: 330px
+
+.push-left
+    margin-left: -330px
+
+
+@media(max-width: 640px)
+    .home-sections .flex
+        display: block
+
+    .col-1
+        max-width: 100%
+
+    .col-50
+        width: auto
+
+    .push-right
+        margin-left: 10px
